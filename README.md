@@ -1,10 +1,10 @@
 # Alurapic
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.7.
+Esse projeto foi gerado usando o tal do [Angular CLI](https://github.com/angular/angular-cli) versão 6.0.7.
 
-## Development server
+## Para executar na tua maquina
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Na pasta do projeto, roda um  `ng serve --open` pra subir um servidor na tua maquina. O navegador vai aparecer no endereco `http://localhost:4200/`. O App vai rodar automaticamente e qualquer alteração de codigo ja vai refletir na tela...louco né jão. Então.
 
 ## Code scaffolding
 
