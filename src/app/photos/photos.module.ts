@@ -1,12 +1,19 @@
-import { NgModule } from "@angular/core";
-import { PhotoComponent } from "./photo/photo.component";
-import { HttpClientModule } from '@angular/common/http'; //necessario para usar requests na aplicacao
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common'; //sempre importe junto,necessario porque sim
+import { HttpClientModule } from '@angular/common/http';
+
+
+import { PhotoModule } from './photo/photo.module';
+import { PhotoFormModule } from './photo-form/photo-form.module';
+import { PhotoListModule } from './photo-list/photo-list.module';
+import { SearchComponent } from './photo-list/search/search.component';
+
 
 @NgModule({
-    declarations : [ PhotoComponent ], //o que só ele tem (private)
-    exports: [PhotoComponent], //o que ele devolve (public)
     imports: [
-        HttpClientModule
+        PhotoModule,
+        PhotoFormModule,
+        PhotoListModule
     ]
 })
 export class PhotosModule { }

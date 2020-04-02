@@ -1,5 +1,6 @@
-import { HttpClient } from '@angular/common/http'; //no module.ts tem a explicacao de como injetar
+import { HttpClient, HttpParams } from '@angular/common/http'; //no module.ts tem a explicacao de como injetar
 import { Injectable } from '@angular/core';
+import { Photo } from './photo';
 
 const API = 'http://localhost:3000';
 
@@ -13,6 +14,12 @@ export class PhotoService {
     listFromUser(userName: string){
         //repara um httpcliente para o endereco solicitado, mas nao dispara
         return this.http.get<Photo[]>(API + `/${userName}/photos`);
+    }
+
+    listFromUserPaginated(userName: string, page: number){
+        const params = new HttpParams().append('page', page.toString());
+        //repara um httpcliente para o endereco solicitado, mas nao dispara
+        return this.http.get<Photo[]>(API + `/${userName}/photos`, { params });
     }
 
 }
