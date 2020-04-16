@@ -32,7 +32,7 @@ export class SingInComponent implements  OnInit{
 
         this.authService.autheticate(userName, password).subscribe(
             ()=>{
-                console.log("ae carai");
+                
                 this.router.navigate(['user',userName]);
             },
             err => {
